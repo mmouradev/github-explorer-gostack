@@ -1,9 +1,16 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import Status from './components/Status';
+import GlobalStyle from './styles/global';
+import Routes from './routes';
 
-const App: React.FC = () => {
-  return <Status />;
-};
+const App: React.FC = () => (
+  <>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+    <GlobalStyle />
+  </>
+);
 
 export default App;
